@@ -12,7 +12,7 @@ const ChatInterface = () => {
       const res = await axios.post('https://apitestopenai.onrender.com/api/generate', { prompt });
       setResponse(res.data.content);
     } catch (error) {
-      console.error(error);
+      console.error('Error al generar la respuesta:', error);
     }
   };
 
