@@ -8,7 +8,8 @@ const ChatInterface = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/generate', { prompt });
+      // const res = await axios.post('http://localhost:5000/api/generate', { prompt });
+      const res = await axios.post('https://apitestopenai.onrender.com/api/generate', { prompt });
       setResponse(res.data.content);
     } catch (error) {
       console.error(error);
